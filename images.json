@@ -2,7 +2,9 @@
   "images": [
     "photo1.jpeg",
     "photo2.jpeg",
-    "photo3.jpeg"
+    "photo3.jpeg",
+    "photo4.jpeg",
+    "photo5.jpeg"
     // Add more filenames as needed
   ]
 }
