@@ -56,13 +56,15 @@
         }
         .gallery {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
+            justify-content: center;
+            align-items: center;
             list-style: none;
             padding: 0;
         }
         .gallery img {
-            max-width: 100%;
+            max-width: 600px;
+            max-height: 400px;
+            width: auto;
             height: auto;
             margin-bottom: 20px;
             border-radius: 8px;
@@ -119,26 +121,42 @@
         <p>&copy; 2024 Ankit Gupta. All rights reserved.</p>
     </footer>
     <script>
+        let currentImageIndex = 0;
+        let imageFilenames = [];
+
         async function loadImages() {
             try {
                 const response = await fetch('images.json');
                 const data = await response.json();
-                const imageFilenames = data.images;
+                imageFilenames = data.images;
 
-                const gallery = document.getElementById('gallery');
-
-                imageFilenames.forEach(filename => {
-                    const listItem = document.createElement('li');
-                    const img = document.createElement('img');
-                    img.src = `images/${filename}`;
-                    img.alt = 'Photo';
-                    listItem.appendChild(img);
-                    gallery.appendChild(listItem);
-                });
+                updateGallery();
             } catch (error) {
                 console.error('Error loading images:', error);
             }
         }
+
+        function updateGallery() {
+            const gallery = document.getElementById('gallery');
+            gallery.innerHTML = '';
+
+            const listItem = document.createElement('li');
+            const img = document.createElement('img');
+            img.src = `images/${imageFilenames[currentImageIndex]}`;
+            img.alt = 'Photo';
+            listItem.appendChild(img);
+            gallery.appendChild(listItem);
+        }
+
+        document.getElementById('prevBtn').addEventListener('click', () => {
+            currentImageIndex = (currentImageIndex - 1 + imageFilenames.length) % imageFilenames.length;
+            updateGallery();
+        });
+
+        document.getElementById('nextBtn').addEventListener('click', () => {
+            currentImageIndex = (currentImageIndex + 1) % imageFilenames.length;
+            updateGallery();
+        });
 
         document.addEventListener('DOMContentLoaded', loadImages);
     </script>
