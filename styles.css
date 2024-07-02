@@ -5,24 +5,79 @@
     box-sizing: border-box;
 }
 
-/* Body styles */
+/* Global Styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    color: #333;
+    background-color: #fff;
+    color: #000;
     line-height: 1.6;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
 }
 
-/* Container styles */
 .container {
+    display: flex;
     max-width: 1200px;
     margin: auto;
     padding: 20px;
 }
 
+/* Left Column */
+.left-column {
+    flex: 0 0 10%;
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    padding: 20px;
+}
+
+.contact-box {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.contact-item {
+    margin: 10px 0;
+}
+
+.contact-item a {
+    text-decoration: none;
+    color: #000;
+    transition: color 0.3s;
+}
+
+.contact-item a:hover {
+    color: #007BFF;
+}
+
+.contact-item i {
+    font-size: 1.5rem; /* Reduced icon size */
+    margin: 5px 0; /* Reduced margin */
+}
+
+/* Right Column */
+.right-column {
+    flex: 0 0 90%; /* Adjusted to make up for the left column change */
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+}
+
+.top-row, .bottom-row {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
 /* Header styles */
 header {
-    background-color: #333;
+    background-color: #000;
     color: #fff;
     text-align: center;
     padding: 1rem;
@@ -34,13 +89,9 @@ header h1 {
     margin-bottom: 0.5rem;
 }
 
-header p {
-    font-size: 1rem;
-}
-
 /* Navigation styles */
 nav {
-    background-color: #333;
+    background-color: #000;
     padding: 0.5rem 0;
     text-align: center;
     margin-bottom: 20px;
@@ -49,8 +100,8 @@ nav {
 nav a {
     color: #fff;
     text-decoration: none;
-    margin: 0 1rem;
     font-size: 1.2rem;
+    margin: 0 1rem;
     transition: color 0.3s;
 }
 
@@ -58,59 +109,11 @@ nav a:hover {
     color: #999;
 }
 
-/* Content styles */
-.content {
-    background-color: #fff;
-    padding: 20px;
-    margin-top: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
 /* Footer styles */
 footer {
-    background-color: #333;
+    background-color: #000;
     color: #fff;
     text-align: center;
     padding: 1rem 0;
     clear: both;
-}
-
-/* Specific styles for Photography page */
-
-.gallery {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.gallery img {
-    max-width: 100%;
-    height: auto;
-    margin: 10px;
-    border-radius: 8px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-}
-
-.navigation {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-}
-
-.navigation button {
-    padding: 10px 20px;
-    margin: 0 10px;
-    font-size: 1rem;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.navigation button:hover {
-    background-color: #555;
 }
