@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ankit Gupta | Home</title>
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         /* Global Styles */
         body {
@@ -61,6 +63,40 @@
         .content p {
             text-align: justify;
         }
+        .section {
+            margin-bottom: 40px;
+        }
+        .section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #000;
+            padding-bottom: 0.5rem;
+        }
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+            padding: 10px 0;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+        .contact-item {
+            margin: 0 10px;
+            text-align: center;
+        }
+        .contact-item a {
+            text-decoration: none;
+            color: #000;
+            transition: color 0.3s;
+        }
+        .contact-item a:hover {
+            color: #007BFF;
+        }
+        .contact-item i {
+            font-size: 2rem;
+            margin: 0 10px;
+        }
         footer {
             background-color: #000;
             color: #fff;
@@ -84,9 +120,36 @@
     </nav>
     <div class="container">
         <section class="content">
-            <h2>Welcome to My Website</h2>
-            <p>I am an accomplished engineering professional with a strong background in Mechanical, Metallurgy, and Materials Science. I hold a Master of Engineering in Mechanical from the University of Windsor and a Master of Technology in Metallurgical and Materials Science from the National Institute of Technology, Jamshedpur. I excel in utilizing advanced tools such as MATLAB, Siemens NX, and Finite Element Analysis software including LS Dyna and Ansys. My expertise spans stress analysis, non-linear analysis, and thermal analysis, with a keen interest in composites and CAD. I am proficient in metallurgical equipment like X-ray diffraction analysis, Scanning Electron Microscopy, and Differential Scanning Calorimetry, and I am fluent in English, Hindi, and Punjabi.</p>
-            <p>I am a member of the Ontario Society of Professional Engineers and hold several certifications, including those from Cornell University and Ansys courses. My patent on an apparatus for sintering iron ore highlights my innovative contributions to the field. With a passion for engineering simulations and a commitment to excellence, I continue to drive innovation and quality in every project I undertake.</p>
+            <div class="section">
+                <h2>About Me</h2>
+                <p>I am an engineering professional with a strong background in Mechanical, Metallurgy, and Materials Science. I hold a Master of Engineering in Mechanical from the University of Windsor and a Master of Technology in Metallurgical and Materials Science from the National Institute of Technology, Jamshedpur.</p>
+                <p>My expertise spans stress analysis, non-linear analysis, and thermal analysis, with a keen interest in composites and CAD. I am proficient in metallurgical equipment like X-ray diffraction analysis, Scanning Electron Microscopy, and Differential Scanning Calorimetry, and I am fluent in English, Hindi, and Punjabi.</p>
+            </div>
+            <div class="section">
+                <h2>Contact Me</h2>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <a href="https://www.linkedin.com/" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                    <div class="contact-item">
+                        <a href="https://github.com/" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                    <div class="contact-item">
+                        <a href="https://www.instagram.com/" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                    <div class="contact-item">
+                        <a href="mailto:your.email@example.com">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </section>
     </div>
     <footer>
